@@ -1,7 +1,19 @@
-import'./LeagueDetails.css'
+import "./LeagueDetails.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faRegistered,
+  faFlag,
+  faFutbol,
+  faMars,
+} from "@fortawesome/free-solid-svg-icons";
+import {} from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-
+import male from "../../images/male.jpg";
+import female from "../../images/female.jpg";
+import facebook from "../../images/facebook.png";
+import youtube from "../../images/yout.jpg";
+import twitter from "../../images/twiter.png";
 const LeagueDetails = () => {
   let { idLeague } = useParams();
   const [details, setDetails] = useState([]);
@@ -23,22 +35,87 @@ const LeagueDetails = () => {
     strGender,
     strDescriptionEN,
     strDescriptionFR,
+    strLogo,
     strFacebook,
     strTwitter,
     strYoutube,
-    strLogo,
   } = details;
+
+  let gender;
+  if (strGender === "Male") {
+    gender = male;
+  } else {
+    gender = female;
+  }
   return (
     <div>
+      {/* LeagueDetails banner & badge */}
       <div class="card bg-dark text-white banner">
         <img src={strBanner} class="card-img" alt="..."></img>
         <div class="card-img-overlay badge">
-        <img src={strBadge} alt="" />
+          <img src={strBadge} alt="" />
         </div>
       </div>
 
-      
+      {/* LeagueDetails info & img  */}
+      <div class="card mb-3 league-info">
+        <div class="row g-0">
+          <div class="col-md-8 p-3">
+            <div class="card-body">
+              <h1 class="card-title">{strLeague}</h1>
+              <br />
+              <h6 class="card-text">
+                <FontAwesomeIcon icon={faRegistered} /> Founded:
+                {dateFirstEvent}
+              </h6>
+              <h6 class="card-text">
+                <FontAwesomeIcon icon={faFlag} /> Country: {strCountry}
+              </h6>
+              <h6 class="card-text">
+                <FontAwesomeIcon icon={faFutbol} />
+                Sport Type: {strSport}
+              </h6>
+              <h6 class="card-text">
+                <FontAwesomeIcon icon={faMars} /> Gender: {strGender}
+              </h6>
+            </div>
+          </div>
+          <div class="col-md-4 group-img">
+            <img src={gender} alt="..."></img>
+          </div>
+        </div>
+      </div>
 
+      {/* LeagueDetails description */}
+      <div>
+        <div class="card container mb-5 details-description">
+          <div class="card-body">{strDescriptionEN}</div>
+        </div>
+        <div class="card container mb-5 details-description">
+          <div class="card-body">{strDescriptionFR}</div>
+        </div>
+      </div>
+
+      {/* social icons */}
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-sm-1">
+            <a href={strFacebook}>
+              <img src={facebook} />
+            </a>
+          </div>
+          <div class="col-sm-1">
+            <a href={strTwitter}>
+              <img src={twitter} />
+            </a>
+          </div>
+          <div class="col-sm-1">
+            <a href={strYoutube}>
+              <img src={youtube} />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
