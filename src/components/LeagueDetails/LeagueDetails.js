@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {} from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import male from "../../images/male.jpg";
 import female from "../../images/female.jpg";
 import facebook from "../../images/facebook.png";
@@ -46,6 +46,12 @@ const LeagueDetails = () => {
     gender = male;
   } else {
     gender = female;
+  }
+
+  //home button
+  let history = useHistory();
+   let handleClick = () =>{
+    history.push("/home");
   }
   return (
     <div>
@@ -115,6 +121,14 @@ const LeagueDetails = () => {
             </a>
           </div>
         </div>
+      </div>
+   
+      {/* home button */}
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary me-md-2" onClick={handleClick}  >
+           Go Home
+        </button>
+
       </div>
     </div>
   );
