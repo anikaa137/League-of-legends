@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <>
       <div class="card bg-dark text-white background-img ">
-        <img src={backgroundImg} class="card-img"></img>
+        <img src={backgroundImg} alt="background-img" class="card-img"></img>
         <div className="centered">
           <h1>LEAGUE of LEGENDS</h1>
         </div>
@@ -23,7 +23,7 @@ const Header = () => {
       <div className="container">
         <div class="row g-4 mt-5 ">
           {leagues.map((league) => (
-            <League league={league}></League>
+            <League league={league} key={league.idLeague}></League>
           ))}
         </div>
       </div>

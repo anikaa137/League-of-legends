@@ -4,7 +4,7 @@ import "./League.css";
 import "./League.css";
 const League = (props) => {
   // console.log(props)
-  const { idLeague, strLeague, strSport, strLeagueAlternate } = props.league;
+  const { idLeague, strLeague,strLeagueAlternate } = props.league;
   let history = useHistory();
   const handleClick = () => {
     history.push(`/LeagueDetails/${idLeague}`);
@@ -23,7 +23,7 @@ const League = (props) => {
   return (
     <>
       <div class="card container shadow-lg p-3 mb-5 bg-body rounded league-cover ">
-        <img src={strBadge} class="card-img-top badge-img"></img>
+        <img src={strBadge} alt="league-badge" class="card-img-top badge-img"></img>
         <div class="card-body">
           <h5 class="card-title">{strLeague}</h5>
           <p class="card-text">{strLeagueAlternate}</p>

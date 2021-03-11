@@ -106,17 +106,17 @@ const LeagueDetails = () => {
         <div class="row justify-content-md-center">
           <div class="col-sm-1">
             <a href={`https://${strFacebook}`} target="_blank">
-              <img src={facebook} />
+              <img src={facebook} alt="facebook-img"/>
             </a>
           </div>
           <div class="col-sm-1">
             <a href={`https://${strTwitter}`} target="_blank">
-              <img src={twitter} />
+              <img src={twitter} alt="twitter-img"/>
             </a>
           </div>
           <div class="col-sm-1">
             <a href={`https://${strYoutube}`} target="_blank">
-              <img src={youtube} />
+              <img src={youtube} alt="youtube-img"/>
             </a>
           </div>
         </div>
