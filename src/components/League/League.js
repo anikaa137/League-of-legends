@@ -26,7 +26,7 @@ const League = (props) => {
         <div class="card-body">
           <h5 class="card-title">{strLeague}</h5>
           <p class="card-text">{strLeagueAlternate}</p>
-          <a href="" onClick={handleClick} class="btn btn-primary">
+          <a href="#" onClick={handleClick} class="btn btn-primary">
             Explore
           </a>
         </div>
