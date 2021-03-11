@@ -24,5 +24,7 @@
 }
 .details-description{
     border-radius: 20px;
+    background-color: #ff8080;
+    color: lightgray;
 }
  
