@@ -23,7 +23,7 @@ const LeagueDetails = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDetails(data.leagues[0]));
-  }, []);
+  }, [idLeague]);
 
   const {
     strBanner,
