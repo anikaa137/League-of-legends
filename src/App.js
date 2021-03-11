@@ -1,9 +1,7 @@
-import "./App.css";
-import navIcon from './images/backgroundImg (3).png'
+import "./App.css"
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/Header/Header";
-import League from "./components/League/League";
 import LeagueDetails from "./components/LeagueDetails/LeagueDetails";
 import Notfound from "./components/NotFound/Notfound";
 

@@ -17,7 +17,7 @@ const League = (props) => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDetails(data.leagues[0]));
-  }, []);
+  }, [idLeague]);
 
   const { strBadge } = details;
   return (
@@ -37,5 +37,3 @@ const League = (props) => {
 };
 
 export default League;
-
- 

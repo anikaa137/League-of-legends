@@ -1,13 +1,12 @@
-.league-cover{
-    width: 18rem;
-    padding: 10px;
-  
+.league-cover {
+  width: 18rem;
+  padding: 10px;
 }
-.league-cover img{
-    width: 200px ;
-    padding: 10px;
-    margin: 0 auto;
+.league-cover img {
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
 }
-body{
-    background-color: #ff9933;
+body {
+  background-color: #ff9933;
 }

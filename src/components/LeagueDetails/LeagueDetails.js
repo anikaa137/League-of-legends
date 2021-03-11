@@ -35,7 +35,6 @@ const LeagueDetails = () => {
     strGender,
     strDescriptionEN,
     strDescriptionFR,
-    strLogo,
     strFacebook,
     strTwitter,
     strYoutube,
@@ -50,9 +49,9 @@ const LeagueDetails = () => {
 
   //home button
   let history = useHistory();
-   let handleClick = () =>{
+  let handleClick = () => {
     history.push("/home");
-  }
+  };
   return (
     <div>
       {/* LeagueDetails banner & badge */}
@@ -122,13 +121,12 @@ const LeagueDetails = () => {
           </div>
         </div>
       </div>
-   
+
       {/* home button */}
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" onClick={handleClick}  >
-           Go Home
+        <button class="btn btn-primary me-md-2" onClick={handleClick}>
+          Go Home
         </button>
-
       </div>
     </div>
   );

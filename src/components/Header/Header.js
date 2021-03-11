@@ -11,13 +11,13 @@ const Header = () => {
       .then((res) => res.json())
       .then((data) => setLeagues(data.leagues.slice(0, 20)));
   }, []);
-  
+
   return (
     <>
       <div class="card bg-dark text-white background-img ">
         <img src={backgroundImg} class="card-img"></img>
         <div className="centered">
-        <h1>LEAGUE of LEGENDS</h1>
+          <h1>LEAGUE of LEGENDS</h1>
         </div>
       </div>
       <div className="container">
