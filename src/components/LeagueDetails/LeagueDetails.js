@@ -40,13 +40,6 @@ const LeagueDetails = () => {
     strYoutube,
   } = details;
 
-  let gender;
-  if (strGender === "Male") {
-    gender = male;
-  } else {
-    gender = female;
-  }
-
   //home button
   let history = useHistory();
   let handleClick = () => {
@@ -86,7 +79,9 @@ const LeagueDetails = () => {
             </div>
           </div>
           <div class="col-md-4 group-img">
-            <img src={gender} alt="..."></img>
+            {
+            strGender === "Male"?<img src={male}  alt="male-group"/>: <img src={female}  alt="female-group"/>
+            }
           </div>
         </div>
       </div>
