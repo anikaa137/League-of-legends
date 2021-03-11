@@ -18,7 +18,6 @@ const League = (props) => {
       .then((res) => res.json())
       .then((data) => setDetails(data.leagues[0]));
   }, [idLeague]);
-
   const { strBadge } = details;
   return (
     <>
@@ -27,7 +26,7 @@ const League = (props) => {
         <div class="card-body">
           <h5 class="card-title">{strLeague}</h5>
           <p class="card-text">{strLeagueAlternate}</p>
-          <a onClick={handleClick} class="btn btn-primary">
+          <a href="" onClick={handleClick} class="btn btn-primary">
             Explore
           </a>
         </div>
