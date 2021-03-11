@@ -1,0 +1,9 @@
+.league-cover{
+    width: 18rem;
+    padding: 10px;
+}
+.league-cover img{
+    width: 200px ;
+    padding: 10px;
+    margin: 0 auto;
+}

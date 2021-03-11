@@ -12,17 +12,16 @@ const Header = () => {
       .then((data) => setLeagues(data.leagues.slice(0, 20)));
   }, []);
   
-  
   return (
     <>
       <div class="card bg-dark text-white background-img ">
         <img src={backgroundImg} class="card-img"></img>
-        <div class="card-img-overlay header-title">
-          <h1>LEAGUE of LEGENDS</h1>
+        <div className="centered">
+        <h1>LEAGUE of LEGENDS</h1>
         </div>
       </div>
       <div className="container">
-        <div class="row g-5 mt-5 ">
+        <div class="row g-4 mt-5 ">
           {leagues.map((league) => (
             <League league={league}></League>
           ))}
